@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Onboarding — Information Security</title>
+  <meta name="description" content="Compacte onboarding rond studiesucces + Privacy & GDPR. Inclusief scenario-quiz, checklist en bronnen. Privacy-vriendelijk, geen tracking." />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🔐</text></svg>">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    const pref = localStorage.getItem('theme');
+    if (pref === 'dark' || (!pref && matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.classList.add('dark');
+    }
+  </script>
+  <style>
+    :focus-visible { outline: 3px solid #818cf8; outline-offset: 2px; border-radius: .5rem; }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 dark:bg-slate-900 dark:text-slate-100">
+  <!-- Header / Nav -->
+  <header class="sticky top-0 z-40 backdrop-blur bg-white/75 dark:bg-slate-900/70 border-b border-slate-200/50 dark:border-slate-800">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center gap-4">
+      <div class="flex items-center gap-2 font-semibold"><span class="text-2xl">🔐</span><span>Information Security — Onboarding</span></div>
+      <nav class="ml-auto hidden md:flex gap-6 text-sm">
+        <a href="#studiesucces" class="hover:underline">Studiesucces</a>
+        <a href="#gdpr" class="hover:underline">Privacy & GDPR</a>
+        <a href="#quiz" class="hover:underline">Scenario-quiz</a>
+        <a href="#checklist" class="hover:underline">Checklist</a>
+        <a href="#resources" class="hover:underline">Resources</a>
+      </nav>
+      <button id="themeToggle" class="ml-auto md:ml-0 rounded-xl px-3 py-1.5 text-sm border border-slate-300 dark:border-slate-700">🌗 Thema</button>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="max-w-6xl mx-auto px-4 pt-10 pb-8">
+    <div class="grid md:grid-cols-2 gap-8 items-center">
+      <div>
+        <h1 class="text-3xl md:text-4xl font-bold leading-tight">Welkom! 👋</h1>
+        <p class="mt-3 text-slate-600 dark:text-slate-300">Deze pagina helpt je snel op weg: slimmer studeren (<strong>Studiesucces</strong>) en verantwoord omgaan met persoonsgegevens (<strong>Privacy & GDPR</strong>).</p>
+        <div class="mt-6 flex flex-wrap gap-3">
+          <a href="#studiesucces" class="rounded-xl px-4 py-2 bg-indigo-600 text-white hover:bg-indigo-700">Start met Studiesucces</a>
+          <a href="#gdpr" class="rounded-xl px-4 py-2 border border-slate-300 dark:border-slate-700">Privacy & GDPR</a>
+        </div>
+        <p class="mt-4 text-xs text-slate-500 dark:text-slate-400">Geen tracking of cookies. Alleen <code>localStorage</code> voor je eigen voortgang (lokaal op dit apparaat).</p>
+      </div>
+      <div class="md:justify-self-end">
+        <div class="rounded-2xl border border-slate-200 dark:border-slate-800 p-6 bg-white/60 dark:bg-slate-800/40">
+          <h2 class="font-semibold">Snelle stappen</h2>
+          <ol class="mt-2 list-decimal list-inside text-sm space-y-1">
+            <li>Lees de <a href="#gdpr" class="underline">GDPR-basics</a>.</li>
+            <li>Doorloop de <a href="#checklist" class="underline">checklist</a>.</li>
+            <li>Maak de <a href="#quiz" class="underline">scenario-quiz</a> (3 min).</li>
+            <li>Bekijk <a href="#resources" class="underline">resources</a> voor verdieping.</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Studiesucces -->
+  <section id="studiesucces" class="max-w-6xl mx-auto px-4 py-10">
+    <h2 class="text-2xl font-bold">Studiesucces</h2>
+    <p class="mt-2 text-slate-600 dark:text-slate-300">Vind een manier van plannen en samenwerken die bij jou past; reflecteer kort en houd het eenvoudig en haalbaar.</p>
+
+    <div class="mt-6 grid md:grid-cols-3 gap-6">
+      <article class="rounded-2xl p-5 border border-slate-200 dark:border-slate-800 bg-white/60 dark:bg-slate-800/40">
+        <h3 class="font-semibold">1) Planning</h3>
+        <ul class="mt-2 text-sm space-y-3 list-disc list-inside">
+          <li>Maak een dagplanning met blokken van 90 minuten en 10 minuten pauze daarna.
+            <p class="pl-6 text-xs text-slate-500 dark:text-slate-400 mt-1">👉 Plan in Google Calendar/Notion; zet meldingen aan.</p>
+          </li>
+          <li>Begin met het lastigste onderdeel (<em>eat that frog</em>).
+            <p class="pl-6 text-xs text-slate-500 dark:text-slate-400 mt-1">👉 Zo voelt de rest lichter en blijf je productief.</p>
+          </li>
+          <li>Stel wekelijkse doelen en verdeel in kleine dagtaken.
+            <p class="pl-6 text-xs text-slate-500 dark:text-slate-400 mt-1">👉 Sluit af met: wat ging goed, wat beter, wat is de volgende stap?</p>
+          </li>
+        </ul>
+      </article>
+      <article class="rounded-2xl p-5 border border-slate-200 dark:border-slate-800 bg-white/60 dark:bg-slate-800/40">
+        <h3 class="font-semibold">2) Tools & werkwijze</h3>
+        <ul class="mt-2 text-sm space-y-3 list-disc list-inside">
+          <li>Werk met duidelijke notities/logboek (keuzes, fouten, leerpunten).</li>
+          <li>Gebruik checklists of stappenplannen voor veiligheidstaken.</li>
+          <li>Bewaar documenten op twee plekken (beveiligde cloud + externe kopie) om verlies te voorkomen.</li>
+        </ul>
+      </article>
+      <article class="rounded-2xl p-5 border border-slate-200 dark:border-slate-800 bg-white/60 dark:bg-slate-800/40">
+        <h3 class="font-semibold">3) Team & reflectie</h3>
+        <ul class="mt-2 text-sm space-y-3 list-disc list-inside">
+          <li>Spreek rollen af en houd korte check-ins (5–10 min) met zicht op voortgang.</li>
+          <li>Vraag/gee f feedback: specifiek, vriendelijk, actiegericht.</li>
+          <li>Reflecteer kort na elke opdracht: goed, beter, volgende stap.</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <!-- GDPR essentials (informatiegericht) -->
+  <section id="gdpr" class="max-w-6xl mx-auto px-4 py-10">
+    <h2 class="text-2xl font-bold">Privacy & GDPR — essentials</h2>
+    <p class="mt-2 text-slate-600 dark:text-slate-300">Privacy en gegevensbescherming vormen de kern van informatiebeveiliging. De GDPR/AVG bepaalt hoe je verantwoord met persoonsgegevens omgaat.</p>
+    <!-- GDPR content kan hier verder worden uitgebreid (kernprincipes, rechten, praktisch handelen, incidentkaart) -->
+  </section>
+
+  <!-- Scenario Quiz -->
+  <section id="quiz" class="max-w-6xl mx-auto px-4 py-10">
+    <h2 class="text-2xl font-bold">Scenario-quiz (3 min)</h2>
+    <p class="mt-2 text-slate-600 dark:text-slate-300">Kies het beste antwoord. Je resultaten blijven lokaal op dit apparaat.</p>
+    <div id="quizContainer" class="mt-6 grid gap-6"></div>
+    <div class="mt-4 flex items-center gap-3">
+      <button id="submitQuiz" class="rounded-xl px-4 py-2 bg-indigo-600 text-white hover:bg-indigo-700">Bekijk score</button>
+      <button id="resetQuiz" class="rounded-xl px-4 py-2 border border-slate-300 dark:border-slate-700">Reset</button>
+      <span id="quizScore" class="text-sm"></span>
+    </div>
+  </section>
+
+  <!-- Checklist -->
+  <section id="checklist" class="max-w-6xl mx-auto px-4 py-10">
+    <h2 class="text-2xl font-bold">Onboarding-checklist</h2>
+    <p class="mt-2 text-slate-600 dark:text-slate-300">Vink af wat je gedaan hebt. Voortgang wordt lokaal opgeslagen via <code>localStorage</code>.</p>
+
+    <!-- voortgangsbalk -->
+    <div class="h-2 bg-slate-200 dark:bg-slate-700 rounded-full overflow-hidden mt-4">
+      <div id="progressBar" class="h-full bg-indigo-600 transition-all" style="width:0%"></div>
+    </div>
+
+    <div id="checklistContainer" class="mt-6 grid md:grid-cols-2 gap-4"></div>
+    <div class="mt-3 text-sm" id="progressText"></div>
+    <button id="resetChecklist" class="mt-3 rounded-xl px-4 py-2 border border-slate-300 dark:border-slate-700">Reset checklist</button>
+  </section>
+
+  <!-- Resources -->
+  <section id="resources" class="max-w-6xl mx-auto px-4 py-10">
+    <h2 class="text-2xl font-bold">Resources</h2>
+    <p class="mt-2 text-slate-600 dark:text-slate-300">Handige bronnen en platformen die je dagelijks zult gebruiken tijdens de opleiding en in je verdere leerproces.</p>
+
+    <div class="mt-6 grid md:grid-cols-2 gap-6 text-sm">
+      <div class="rounded-2xl p-5 border border-slate-200 dark:border-slate-800 bg-white/60 dark:bg-slate-800/40">
+        <h3 class="font-semibold">📘 Studie & Tools</h3>
+        <ul class="mt-2 list-disc list-inside space-y-2">
+          <li>Time-management technieken (Pomodoro, blokplanning, focusblokken).</li>
+          <li>Online leerplatformen voor cybersecurity en privacy (TryHackMe, Cybrary, OWASP).</li>
+          <li>Basisbronnen over AVG, privacy-by-design en dataminimalisatie.</li>
+          <li>Beveiligingstools: VPN, password manager, versleuteling (bijv. VeraCrypt of BitLocker).</li>
+          <li>Reflectietools zoals Notion of Miro om je voortgang bij te houden.</li>
+        </ul>
+      </div>
+
+      <div class="rounded-2xl p-5 border border-slate-200 dark:border-slate-800 bg-white/60 dark:bg-slate-800/40">
+        <h3 class="font-semibold">💻 Studentenportalen</h3>
+        <ul class="mt-2 list-disc list-inside space-y-2">
+          <li><strong>HINT:</strong> Opleidingsinformatie — boekenlijsten, roosters, vakanties, nieuws.</li>
+          <li><strong>MyHR:</strong> Agenda, resultaten, berichten en meer.</li>
+          <li><strong>Osiris:</strong> Cijfers, studiekeuzevakken en inschrijvingen.</li>
+          <li><strong>Brightspace:</strong> Opdrachten, feedback en cursusmateriaal.</li>
+        </ul>
+        <p class="mt-3 text-xs text-slate-500 dark:text-slate-400">
+          💡 Gebruik deze portalen regelmatig om up-to-date te blijven over lessen, resultaten en mededelingen.
+        </p>
+      </div>
+    </div>
+
+    <div class="mt-6 text-xs text-slate-500 dark:text-slate-400 border-t border-slate-200 dark:border-slate-700 pt-4">
+      <p><strong>Let op:</strong> Controleer altijd of je inlogt via de officiële beveiligde omgeving van de hogeschool of instelling.</p>
+    </div>
+  </section>
+
+  <footer class="mt-10 border-t border-slate-200 dark:border-slate-800">
+    <div class="max-w-6xl mx-auto px-4 py-6 text-sm flex flex-col md:flex-row md:items-center gap-3">
+      <div>© <span id="year"></span> Information Security Onboarding</div>
+      <div class="md:ml-auto flex gap-3">
+        <a href="#" class="underline" onclick="alert('Deze demo gebruikt geen cookies en slaat niets extern op.'); return false;">Privacy (demo)</a>
+        <a href="https://github.com/new" target="_blank" class="underline">Maak GitHub repo</a>
+        <a href="https://pages.github.com/" target="_blank" class="underline">Deploy met GitHub Pages</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // === Dark mode toggle ===
+    const htmlEl = document.documentElement;
+    const themeBtn = document.getElementById('themeToggle');
+    const storedTheme = localStorage.getItem('theme');
+    const prefersDark = matchMedia('(prefers-color-scheme: dark)').matches;
+    if (storedTheme === 'dark' || (!storedTheme && prefersDark)) {
+      htmlEl.classList.add('dark');
+      themeBtn.textContent = '☀️ Licht thema';
+    } else {
+      htmlEl.classList.remove('dark');
+      themeBtn.textContent = '🌙 Donker thema';
+    }
+    themeBtn.addEventListener('click', () => {
+      const isDark = htmlEl.classList.toggle('dark');
+      localStorage.setItem('theme', isDark ? 'dark' : 'light');
+      themeBtn.textContent = isDark ? '☀️ Licht thema' : '🌙 Donker thema';
+    });
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // === Quiz (aansluitend op de inhoud) ===
+    const quizData = [
+      { q: 'Wat betekent doelbinding en dataminimalisatie in de AVG-context?', options: [ 'Je mag alle data verzamelen zolang je ze beveiligt.', 'Je verzamelt alleen gegevens die nodig zijn voor een duidelijk omschreven doel.', 'Je verzamelt eerst breed, en verwijdert later wat je niet gebruikt.' ], a: 1, explain: 'Doelbinding + dataminimalisatie: vooraf een concreet doel bepalen en alleen noodzakelijke gegevens verwerken.' },
+      { q: 'Welke combinatie past bij “nauwkeurigheid, opslagbeperking, vertrouwelijkheid”?', options: [ 'Data nooit verwijderen en overal back-uppen voor de zekerheid.', 'Regelmatig opschonen, bewaartermijnen hanteren en veilige opslag met toegangscontrole.', 'Juist zo min mogelijk back-ups maken om datalekken te voorkomen.' ], a: 1, explain: 'Houd gegevens actueel, bewaar niet langer dan nodig en bescherm met passende technische/organisatorische maatregelen.' },
+      { q: 'Accountability (verantwoordingsplicht) betekent dat je…', options: [ '…alleen mondeling kunt uitleggen wat je doet met data.', '…kunt aantonen wat je verwerkt en op welke grondslag, bijv. via documentatie of een logboek.', '…nooit hoeft toe te lichten waarom je data verwerkt.' ], a: 1, explain: 'Je moet kunnen laten zien welke verwerkingen je doet en waarom (grondslag, doel, bewaartermijnen, beveiliging).' },
+      { q: 'Iemand doet een inzageverzoek op grond van de AVG. Wat is de juiste eerste stap?', options: [ 'Direct alle gegevens mailen om snel te zijn.', 'Identiteit verifiëren, verzoek registreren en binnen 1 maand zorgvuldig reageren.', 'Negeren als het te veel tijd kost.' ], a: 1, explain: 'Verifieer wie het verzoek doet, log het verzoek en reageer tijdig (meestal binnen 1 maand).' },
+      { q: 'Wat is dataportabiliteit?', options: [ 'Het recht om vergeten te worden.', 'Het recht om gegevens in een gangbaar, machineleesbaar formaat te ontvangen/overdragen.', 'Het recht om profilering toe te staan.' ], a: 1, explain: 'Dataportabiliteit = overdraagbaarheid van gegevens naar een andere partij in een bruikbaar formaat.' },
+      { q: 'Welke praktijk is het meest AVG-proof?', options: [ 'Wachtwoorden delen met teamgenoten voor snelheid.', 'Password manager gebruiken en MFA inschakelen op accounts.', 'Eén sterk wachtwoord voor alle tools, maandelijks wijzigen.' ], a: 1, explain: 'Gebruik unieke wachtwoorden, bewaar ze in een password manager en zet MFA aan.' },
+      { q: 'Je moet persoonsgegevens opslaan voor een project. Wat kies je?', options: [ 'Privé-cloud/WhatsApp voor gemak.', 'Beveiligde, versleutelde opslag en minimale kopieën.', 'USB-stick zonder versleuteling zodat het offline is.' ], a: 1, explain: 'Gebruik beveiligde opslag, zo min mogelijk kopieën en versleuteling waar passend.' },
+      { q: 'Wat betekent “privacy by design”?', options: [ 'Privacymaatregelen achteraf toevoegen wanneer er tijd is.', 'Privacy en dataminimalisatie vanaf het begin in ontwerp en processen inbouwen.', 'Alleen juridische documenten opstellen; techniek is niet relevant.' ], a: 1, explain: 'Integreer privacyprincipes in ontwerp, processen en techniek vanaf de start.' },
+      { q: 'Je stuurt per ongeluk een document met persoonsgegevens naar de verkeerde ontvanger. Wat is je eerste stap?', options: [ 'Wachten of iemand klaagt.', 'Containment: toegang beperken/terughalen, wachtwoorden wijzigen indien nodig en verdere verspreiding voorkomen.', 'Alles verwijderen zodat niemand het terug kan vinden.' ], a: 1, explain: 'Eerst de schade beperken (containment), daarna registreren/melden en vervolgstappen nemen.' },
+      { q: 'Binnen welke termijn kan een melding aan de toezichthouder verplicht zijn bij een datalek?', options: [ 'Binnen 72 uur na ontdekking.', 'Binnen 30 dagen na afloop van het project.', 'Alleen aan het einde van het jaar.' ], a: 0, explain: 'Bij meldplichtige datalekken moet in principe binnen 72 uur gemeld worden.' },
+    ];
+
+    const quizStateKey = 'infosec_quiz_v1';
+    const quizContainer = document.getElementById('quizContainer');
+
+    function renderQuiz() {
+      quizContainer.innerHTML = '';
+      const saved = JSON.parse(localStorage.getItem(quizStateKey) || '{}');
+      quizData.forEach((item, idx) => {
+        const card = document.createElement('div');
+        card.className = 'rounded-2xl p-5 border border-slate-200 dark:border-slate-800 bg-white/60 dark:bg-slate-800/40';
+        card.innerHTML = `
+          <p class="font-medium">${idx + 1}. ${item.q}</p>
+          <div class="mt-3 grid gap-2">
+            ${item.options.map((opt, i) => {
+              const checked = saved[idx] === i ? 'checked' : '';
+              return `<label class=\"flex items-start gap-2 cursor-pointer\">\n                <input type=\"radio\" name=\"q${idx}\" value=\"${i}\" ${checked} class=\"mt-1\">\n                <span class=\"text-sm\">${opt}</span>\n              </label>`;
+            }).join('')}
+          </div>`;
+        quizContainer.appendChild(card);
+      });
+    }
+
+    renderQuiz();
+
+    document.getElementById('submitQuiz').addEventListener('click', () => {
+      const answers = {};
+      quizData.forEach((_, idx) => {
+        const sel = document.querySelector(`input[name="q${idx}"]:checked`);
+        answers[idx] = sel ? Number(sel.value) : null;
+      });
+      localStorage.setItem(quizStateKey, JSON.stringify(answers));
+      let correct = 0, total = quizData.length;
+      quizData.forEach((q, i) => { if (answers[i] === q.a) correct++; });
+      const scoreEl = document.getElementById('quizScore');
+      let feedback = '';
+      if (correct <= 5) feedback = ' — Basis opfrissen: check de principes en praktische tips hierboven.';
+      else if (correct <= 8) feedback = ' — Goed op weg! Nog even scherp op rechten & datalek-stappen.';
+      else feedback = ' — Top! Je beheerst de kern van Privacy & GDPR.';
+      scoreEl.textContent = `Score: ${correct}/${total}${feedback}`;
+
+      // Uitleg onder elke vraag
+      const cards = quizContainer.children;
+      quizData.forEach((q, i) => {
+        const existing = cards[i].querySelector('.explain');
+        if (existing) existing.remove();
+        const exp = document.createElement('p');
+        exp.className = 'explain mt-3 text-xs text-slate-600 dark:text-slate-300';
+        exp.textContent = `Uitleg: ${q.explain}`;
+        cards[i].appendChild(exp);
+      });
+    });
+
+    document.getElementById('resetQuiz').addEventListener('click', () => {
+      localStorage.removeItem(quizStateKey);
+      document.getElementById('quizScore').textContent = '';
+      renderQuiz();
+    });
+
+    // === Checklist (met voortgangsbalk) ===
+    const checklistKey = 'infosec_checklist_v1';
+    const checklistItems = [
+      { id: 'software', text: 'Installeer en test alle benodigde software (Office 365, browser, etc.).' },
+      { id: 'mail', text: 'Controleer je studentenmail en agenda voor introductiedagen en deadlines.' },
+      { id: 'planning', text: 'Maak een weekplanning met vaste studieblokken en rustmomenten.' },
+      { id: 'workspace', text: 'Richt een rustige studieplek in met goed licht en stabiel internet.' },
+      { id: 'privacy', text: 'Lees de basis over privacy, gegevensbescherming en ethisch handelen.' },
+      { id: 'passwords', text: 'Stel veilige wachtwoorden in en gebruik MFA met een password manager.' },
+      { id: 'community', text: 'Maak kennis met klasgenoten of sluit aan bij studiegroepen.' },
+      { id: 'goals', text: 'Bedenk persoonlijke leerdoelen voor de eerste weken van je studie.' },
+      { id: 'backup', text: 'Test een simpele back-up (cloud of externe schijf).' },
+      { id: 'retro', text: 'Plan een korte reflectie na de eerste week: wat ging goed, wat kan beter?' }
+    ];
+
+    const checklistContainer = document.getElementById('checklistContainer');
+    const progressText = document.getElementById('progressText');
+    const progressBar = document.getElementById('progressBar');
+
+    function renderChecklist() {
+      const state = JSON.parse(localStorage.getItem(checklistKey) || '{}');
+      checklistContainer.innerHTML = '';
+      let done = 0;
+      checklistItems.forEach(item => {
+        const checked = !!state[item.id];
+        if (checked) done++;
+        const row = document.createElement('label');
+        row.className = 'flex gap-3 items-start rounded-xl p-4 border border-slate-200 dark:border-slate-800 bg-white/60 dark:bg-slate-800/40';
+        row.innerHTML = `
+          <input type="checkbox" ${checked ? 'checked' : ''} data-id="${item.id}" class="mt-1">
+          <span class="text-sm">${item.text}</span>`;
+        checklistContainer.appendChild(row);
+      });
+      progressText.textContent = `Voortgang: ${done}/${checklistItems.length} taken afgerond`;
+      progressBar.style.width = `${(done / checklistItems.length) * 100}%`;
+    }
+
+    checklistContainer.addEventListener('change', (e) => {
+      const box = e.target.closest('input[type="checkbox"]');
+      if (!box) return;
+      const state = JSON.parse(localStorage.getItem(checklistKey) || '{}');
+      state[box.dataset.id] = box.checked;
+      localStorage.setItem(checklistKey, JSON.stringify(state));
+      renderChecklist();
+    });
+
+    document.getElementById('resetChecklist').addEventListener('click', () => {
+      localStorage.removeItem(checklistKey);
+      renderChecklist();
+    });
+
+    renderChecklist();
+  </script>
+</body>
+</html>
