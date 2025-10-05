@@ -38,12 +38,12 @@
     <div class="grid md:grid-cols-2 gap-8 items-center">
       <div>
         <h1 class="text-3xl md:text-4xl font-bold leading-tight">Welkom! 👋</h1>
-        <p class="mt-3 text-slate-600 dark:text-slate-300">Deze pagina helpt je snel op weg om: slimmer te studeren (<strong>Studiesucces</strong>) en verantwoord omgaan met persoonsgegevens (<strong>Privacy & GDPR</strong>).</p>
+        <p class="mt-3 text-slate-600 dark:text-slate-300">Deze pagina helpt je op weg met (<strong>Studiesucces</strong>) en verantwoord omgaan met persoonsgegevens (<strong>Privacy & GDPR</strong>).</p>
         <div class="mt-6 flex flex-wrap gap-3">
           <a href="#studiesucces" class="rounded-xl px-4 py-2 bg-indigo-600 text-white hover:bg-indigo-700">Start met Studiesucces</a>
           <a href="#gdpr" class="rounded-xl px-4 py-2 border border-slate-300 dark:border-slate-700">Privacy & GDPR</a>
         </div>
-        <p class="mt-4 text-xs text-slate-500 dark:text-slate-400">Geen tracking of cookies. Alleen <code>localStorage</code> voor je eigen voortgang (lokaal op dit apparaat).</p>
+        <p class="mt-4 text-xs text-slate-500 dark:text-slate-400">Geen tracking of cookies. Alleen <code>LocalStorage</code></code> voor je eigen voortgang (lokaal op dit apparaat).</p>
       </div>
       <div class="md:justify-self-end">
         <div class="rounded-2xl border border-slate-200 dark:border-slate-800 p-6 bg-white/60 dark:bg-slate-800/40">
@@ -158,7 +158,7 @@
           <li><strong>Brightspace:</strong> Opdrachten, feedback en cursusmateriaal.</li>
         </ul>
         <p class="mt-3 text-xs text-slate-500 dark:text-slate-400">
-          💡 Gebruik deze portalen regelmatig om up-to-date te blijven over lessen, resultaten en mededelingen.
+          💡 Gebruik deze websites regelmatig om up-to-date te blijven over lessen, resultaten en mededelingen.
         </p>
       </div>
     </div>
@@ -175,7 +175,7 @@
     <p class="text-sm leading-relaxed">
       <strong>Naam:</strong> Robin (She/Her)<br>
       <strong>Studentnummer:</strong> 1125527<br>
-      <strong>Opleiding:</strong> 1ste-jaars student — Hogeschool Rotterdam, Ad Information Security<br>
+      <strong>Opleiding:</strong> 1ste-jaars student, Hogeschool Rotterdam, Ad Information Security<br>
       <strong>Interested:</strong> Fashion, Horror Movies, Video Games & IT.
     </p>
   </div>
@@ -262,7 +262,7 @@
       const scoreEl = document.getElementById('quizScore');
       let feedback = '';
       if (correct <= 5) feedback = ' — Basis opfrissen: check de principes en praktische tips hierboven.';
-      else if (correct <= 8) feedback = ' — Goed op weg! Nog even scherp op rechten & datalek-stappen.';
+      else if (correct <= 8) feedback = ' — Goed bezig! Let nog even extra op de rechten van betrokkenen en de stappen bij een datalek.';
       else feedback = ' — Top! Je beheerst de kern van Privacy & GDPR.';
       scoreEl.textContent = `Score: ${correct}/${total}${feedback}`;
 
@@ -295,7 +295,7 @@
       { id: 'passwords', text: 'Stel veilige wachtwoorden in en gebruik MFA met een password manager.' },
       { id: 'community', text: 'Maak kennis met klasgenoten of sluit aan bij studiegroepen.' },
       { id: 'goals', text: 'Bedenk persoonlijke leerdoelen voor de eerste weken van je studie.' },
-      { id: 'backup', text: 'Test een simpele back-up (cloud of externe schijf).' },
+      { id: 'backup', text: 'Stel een back-up plan op! (cloud of externe schijf).' },
       { id: 'retro', text: 'Plan een korte reflectie na de eerste week: wat ging goed, wat kan beter?' }
     ];
 
