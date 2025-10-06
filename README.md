@@ -5,7 +5,7 @@
 **Opleiding:** Ad Information Security, Hogeschool Rotterdam  
 **Versie:** 1.0  
 **Datum:** Oktober 2025  
-
+**Page Link:** https://moonlightrobin.github.io/hr-infosec-onboarding/
 ---
 
 ## 🎯 Opdrachtomschrijving  
